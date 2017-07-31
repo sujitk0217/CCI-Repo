@@ -2,19 +2,19 @@
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="1/19/2017 8:37:53 AM"
-  DTS:CreationName="SSIS.Package.3"
+  DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="MIA-DEVBISQL1"
   DTS:CreatorName="CCRN\schavan"
   DTS:DTSID="{2C2A9E24-36F4-4EB4-BA2D-2F8A5611655F}"
-  DTS:ExecutableType="SSIS.Package.3"
-  DTS:LastModifiedProductVersion="11.0.6020.0"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.2165.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="PhoneAllocations"
   DTS:PackageType="5"
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{D39B62F3-56D2-4239-8404-189A5B766392}">
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{634B2355-20AE-4488-A0AD-336946FF0DD3}">
   <DTS:Property
-    DTS:Name="PackageFormatVersion">6</DTS:Property>
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[ITES_Restore.itesprod]"
@@ -23,12 +23,7 @@
       DTS:ObjectName="ITES_Restore.itesprod">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="uid=itesprod;Dsn=ITES_Restore;">
-          <DTS:Password
-            DTS:Name="pwd"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAyYLmXpnaUE2NJTuoLmwwMgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACvSGQyFksk8FTAmjJtGJd9AAAAAASAAACgAAAAEAAAAAP3g479zaYXzr84ovXuDnEYAAAAgVg2lbsZbf2z+pittitF/f8bsRXXy8MBFAAAAORML45jiRzj1jzId1YCWB5HHL1F</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="uid=itesprod;Dsn=ITES_Restore;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -38,12 +33,7 @@
       DTS:ObjectName="ITES_Restore.itesprod 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="uid=itesprod;Dsn=ITES_Restore;">
-          <DTS:Password
-            DTS:Name="pwd"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAyYLmXpnaUE2NJTuoLmwwMgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACMz7z4Ivu5cHhzzEY5FHIUAAAAAASAAACgAAAAEAAAAEa4iDftIvUnlTnI/n0jhF0YAAAAer76y54FjnBrbY3E5wUSmEG7fnmFg2eMFAAAAOfOqLbPOCqRknpHa2t/fDpb01GG</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="uid=itesprod;Dsn=ITES_Restore;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -119,11 +109,11 @@ where id&gt;1</DTS:VariableValue>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Data Flow Task"
-      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:CreationName="Microsoft.Pipeline"
       DTS:DelayValidation="True"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{70C8A351-EF64-44B2-8F94-78C53754CE5C}"
-      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
@@ -136,7 +126,7 @@ where id&gt;1</DTS:VariableValue>
           <components>
             <component
               refId="Package\Data Flow Task\Data Conversion"
-              componentClassID="{62B1106C-7DB8-4EC8-ADD6-4C664DFFC54A}"
+              componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Data Conversion"
               name="Data Conversion"
@@ -549,7 +539,7 @@ where id&gt;1</DTS:VariableValue>
             </component>
             <component
               refId="Package\Data Flow Task\Derived Column"
-              componentClassID="{49928E82-9C4E-49F0-AABE-3812B82707EC}"
+              componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
               name="Derived Column"
@@ -622,12 +612,12 @@ where id&gt;1</DTS:VariableValue>
             </component>
             <component
               refId="Package\Data Flow Task\ODBC Source"
-              componentClassID="{A77F5655-A006-443A-9B7E-90B6BD55CB84}"
+              componentClassID="Attunity.SSISODBCSrc"
               contactInfo="ODBC Source;Connector for Open Database Connectivity (ODBC) by Attunity; Attunity Ltd.; All Rights Reserved; http://www.attunity.com;1"
               description="ODBC Source"
               name="ODBC Source"
               usesDispositions="true"
-              version="1">
+              version="6">
               <properties>
                 <property
                   dataType="System.String"
@@ -1159,7 +1149,7 @@ where id&gt;1</DTS:VariableValue>
             </component>
             <component
               refId="Package\Data Flow Task\OLE DB Destination"
-              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
               name="OLE DB Destination"
@@ -1182,7 +1172,7 @@ where id&gt;1</DTS:VariableValue>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1545,10 +1535,10 @@ where id&gt;1</DTS:VariableValue>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Get Max ID from PhoneAllocations"
-      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{B81FF441-788F-4AFF-9449-60A6DBDD5B26}"
-      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get Max ID from PhoneAllocations"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
@@ -1567,10 +1557,10 @@ where id&gt;1</DTS:VariableValue>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Update Date"
-      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{2D069801-68E1-40CB-801B-075ABDA0D759}"
-      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Update Date"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
@@ -1585,10 +1575,10 @@ where id&gt;1</DTS:VariableValue>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Update Entry_Date_EST"
-      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{18973FA2-9DEA-485F-87E1-C4D0DBEF4080}"
-      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Update Entry_Date_EST"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
@@ -1633,7 +1623,7 @@ where id&gt;1</DTS:VariableValue>
 <!--If you manually edit this section and make a mistake, you can delete it. -->
 <!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
-  Version="sql11">
+  Version="8">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
@@ -1641,7 +1631,7 @@ where id&gt;1</DTS:VariableValue>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151,42"
+          Size="150.666666666667,42"
           Id="Package\Data Flow Task"
           TopLeft="59,107.5" />
         <NodeLayout
@@ -1746,6 +1736,13 @@ where id&gt;1</DTS:VariableValue>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <AnnotationLayout
+          Text=""
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="126.666666666667,60"
+          Id="7dfd6c24-f6ac-4ab8-a0b9-1498b81b1d4c"
+          TopLeft="312.499995343387,206.916662966708" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
